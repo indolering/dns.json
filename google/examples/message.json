@@ -1,0 +1,38 @@
+{
+  "Status": 0,  // NOERROR - Standard DNS response code (32 bit integer).
+  "TC": false,  // Whether the response is truncated
+  "RD": true,   // Always true for Google Public DNS
+  "RA": true,   // Always true for Google Public DNS
+  "AD": false,  // Whether all response data was validated with DNSSEC
+  "CD": false,  // Whether the client asked to disable DNSSEC
+  "Question":
+  [
+    {
+      "name": "apple.com.",  // FQDN with trailing dot
+      "type": 1              // A - Standard DNS RR type
+    }
+  ],
+  "Answer":
+  [
+    {
+      "name": "apple.com.",   // Always matches name in the Question section
+      "type": 1,              // A - Standard DNS RR type
+      "TTL": 3599,            // Record's time-to-live in seconds
+      "data": "17.178.96.59"  // Data for A - IP address as text
+    },
+    {
+      "name": "apple.com.",
+      "type": 1,
+      "TTL": 3599,
+      "data": "17.172.224.47"
+    },
+    {
+      "name": "apple.com.",
+      "type": 1,
+      "TTL": 3599,
+      "data": "17.142.160.59"
+    }
+  ],
+  "Additional": [ ],
+  "edns_client_subnet": "12.34.56.78/0"  // IP address / scope prefix-length
+}

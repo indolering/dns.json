@@ -1,7 +1,9 @@
-This is a repo for different JSON
+Hola!
 
-A naive transliteration of the plaintext zone format and binary message protocol would contain seldom used vestigial
- structures and inherit a style designed for B&W 640x480 terminals.  A new JSON standard offers an opportunity to
- update the specification, but how does one chose the "best" corrective action?  The best standards tend to codify
- existing practices (markdown) or are the result of competition (AES, SHA2, etc).  While popularity is not a universal
- indicator of quality, this proposal is informed by a survey of existing DNS REST APIs.
+I originally was planning on hosting other proposals and examples of existing formats.  That would be awesome, but 
+ it's probably overkill.  Until there is demand, check out this comparison of [DNS APIs][survey] and you can 
+  
+  * [DNS survey][survey]
+  * ["modular" proposal][modular]
+  
+[survey]: https:bit.ly/2nBokfK

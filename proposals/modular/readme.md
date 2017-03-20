@@ -87,19 +87,19 @@ Message
     {
       "[id]": int,
       "[error]": false|"NXDOMAIN", //Replaces `rcode` field
-      "[qr]": false,
       "[td]": false,     //TD - Whether reponse was truncated.
       "[ra]": true,      //RA - Whether recursion was available.
       "[rd]": true,      //RD - Whether recursion is requested.
       "[ad]": false,     //AD - Whether all responses requested validated using DNSSEC
       "[cd]": false,     //CD - Whether the client asked to disable DNSSEC
       "[*]": null,       //etc
+      "type": "query"|"response"  //More legible version of QR
       "question": [
         {"name":"string", "type":"AAAA", "[class]": "IN"}
       ]
-      "[answer]": Array<records>,
-      "[additional]": Array<records>,
-      "[authority]": Array<records>
+      "answer": Array<records>,
+      "additional": Array<records>,
+      "authority": Array<records>
     }
     
 All fields have been lower-cased, the rcode field has been replaced with keyword errors, the q-prefix in the question
@@ -190,23 +190,24 @@ Most implementations can support the Extended message format by simply making th
       "[rcode]": int,
       "[error]": int|bool|null|string
       "[id]": int|string,
-      "[qr]": int|bool|null,
+      "[qr]": int|null,          //QR - Whether message is question (0) or answer (1)
       "[td]": int|bool|null,     //TD - Whether reponse was truncated.
       "[ra]": int|bool|null,     //RA - Whether recursion was available.
       "[rd]": int|bool|null,     //RD - Whether recursion is requested.
       "[ad]": int|bool|null,     //AD - Whether all responses requested validated using DNSSEC
       "[cd]": int|bool|null,     //CD - Whether the client asked to disable DNSSEC
       "[*]": null,               //etc
-      "[qname|name]": string,
-      "[qtype|type]": string,
-      "[qclass|class]": int|string
+      "[qname]": string,
+      "[qtype]": string,
+      "[qclass]": int|string,
+      "[type]": "query"|"response"|null //Non-standard replacement for QR
       "[question]":
         [
           {"qname|name": "example.com.", "qtype|name": int|string, "[qclass|class]":"IN"        
         ]
-      "[answer]": Array<records>,
-      "[additional]": Array<records>,
-      "[authority]": Array<records>
+      "answer": Array<records>,
+      "additional": Array<records>,
+      "authority": Array<records>
     }
 
  

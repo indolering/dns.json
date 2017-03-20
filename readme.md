@@ -6,4 +6,4 @@ I originally was planning on hosting other proposals and examples of existing fo
  DNS APIs [here][survey].
  
 [survey]: https://bit.ly/2nBokfK
-[modular]: https://fix.me
+[modular]: https://github.com/indolering/dns.json/tree/master/proposals/modular

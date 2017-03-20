@@ -102,9 +102,9 @@ Message
       "authority": Array<records>
     }
     
-All fields have been lower-cased, the rcode field has been replaced with keyword errors, the q-prefix in the question
- section dropped, and various values given defaults.  The latter two changes may be controversial, but they would be
- big wins for readability and ergonomics.
+All fields have been lower-cased, the `rcode` field has been replaced with keyword errors, `QR` replaced with `type`,
+ the q-prefix in the question section dropped, and various values given defaults.  The latter two changes may be
+ controversial, but they would be big wins for readability and ergonomics.
 
 Extended
 ========
